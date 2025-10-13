@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Tutorials | Pro2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        header {
+            width: 100vw;
+            height: 61px;
+            background: #313131;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+        }
+        
+        header h1 { font-size: 24px; }
+        header h2 { font-size: 16px; font-weight: normal; }
+        
+        .rectangle {
+            width: 100vw;
+            height: 8px;
+            background: #00A2C7;
+        }
+        
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        main p, main h2 { text-align: left; }
+        
+        #img-box {
+            width: 100%;
+            height: 300px;
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            margin-bottom: 20px;
+        }
+        
+        .paginator {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+        
+        .paginator a {
+            padding: 8px 16px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .paginator a:hover { background: #f5f5f5; }
+        .paginator a.active { background: #00A2C7; color: white; }
+        .paginator a.disabled { color: #ccc; pointer-events: none; }
+        
+        .page-numbers { display: flex; gap: 10px; }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Drawing Tutorials</h1>
+        <h2>Other Guides  |  About  |  Contact</h2>
+    </header>
+    <div class="rectangle"></div>
+    
+    <main>
+        <h1>How to Draw A Simple Dog</h1>
+        <div id="img-box"></div>
+        <h2>Introduction:</h2>
+        <p>Welcome to the Simple Dog tutorial, dogs come in all shapes and sizes, 
+        but today we'll go with a popular breed. To keep things easy the dog we are gonna be drawing this time is a husky. 
+        Each step will be broken up into 2 to 4 parts. Go on to step 5 to start.</p>
+        
+        <div class="paginator">
+            <a href="step3.html">← Previous</a>
+            <div class="page-numbers">
+                <a href="index.html">1</a>
+                <a href="step1.html">2</a>
+                <a href="step2.html">3</a>
+                <a href="step3.html">4</a>
+                <a href="step4.html" class="active">5</a>
+                <a href="step5.html">6</a>
+            </div>
+            <a href="step5.html">Next →</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>DrawingTutorials@fakemail.com</p>
+        <p>© 2025 Drawing Tutorials. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
