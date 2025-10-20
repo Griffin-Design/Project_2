@@ -85,6 +85,54 @@
             justify-content: center;
             gap: 20px;
         }
+        
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+            margin: 40px auto;
+            max-width: 440px;
+            justify-items: center;
+        }
+        
+        .card {
+            width: 200px;
+            height: 250px;
+            background: white;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 160px;
+            background: #f0f0f0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .card-description {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
@@ -96,7 +144,48 @@
     
     <main>
         <h1>How To Make The Base Shape</h1>
-        <div id="img-box"></div>
+        
+        <div class="card-container">
+            <div class="card">
+                <div class="card-image">
+                    Step 2 Image
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Add</div>
+                    <div class="card-description">Add</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image">
+                    Step 2 Image
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Add</div>
+                    <div class="card-description">Add</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image">
+                    Step 2 Image
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Add</div>
+                    <div class="card-description">Add</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image">
+                    Step 2 Image
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Add</div>
+                    <div class="card-description">Add</div>
+                </div>
+            </div>
+        </div>
         
         <div class="paginator">
             <a href="step1.html">← Previous</a>
