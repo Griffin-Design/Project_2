@@ -24,10 +24,18 @@
             height: 61px;
             background: #313131;
             display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        .header-content {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
-            color: white;
         }
         
         header h1 { font-size: 24px; }
@@ -49,12 +57,12 @@
         
         main p, main h2 { text-align: left; }
         
-        #img-box {
-            width: 100%;
-            height: 300px;
-            background-color: #f0f0f0;
-            border: 2px dashed #ccc;
-            margin-bottom: 20px;
+        .step-title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .paginator {
@@ -79,11 +87,24 @@
         .page-numbers { display: flex; gap: 10px; }
         
         footer {
-            text-align: center;
-            padding: 20px;
+            padding: 20px 0;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-email {
+            margin: 0;
+        }
+        
+        .footer-copyright {
+            margin: 0;
         }
         
         .card-container {
@@ -108,7 +129,6 @@
             width: 100%;
             height: 160px;
             background: #f0f0f0;
-            border-bottom: 1px solid #ddd;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -117,38 +137,41 @@
         }
         
         .card-content {
-            padding: 15px;
+            padding: 12px;
             text-align: center;
         }
         
         .card-title {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
             color: #333;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         
         .card-description {
-            font-size: 12px;
+            font-size: 11px;
             color: #666;
-            line-height: 1.4;
+            line-height: 1.3;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Drawing Tutorials</h1>
-        <h2>Other Guides  |  About  |  Contact</h2>
+        <div class="header-content">
+            <h1>Drawing Tutorials</h1>
+            <h2>Other Guides  |  About  |  Contact</h2>
+        </div>
     </header>
     <div class="rectangle"></div>
     
     <main>
+        <div class="step-title">Step 2</div>
         <h1>How To Make The Base Shape</h1>
         
         <div class="card-container">
             <div class="card">
                 <div class="card-image">
-                    Step 2 Image
+                 
                 </div>
                 <div class="card-content">
                     <div class="card-title">Add</div>
@@ -158,7 +181,7 @@
             
             <div class="card">
                 <div class="card-image">
-                    Step 2 Image
+                 
                 </div>
                 <div class="card-content">
                     <div class="card-title">Add</div>
@@ -168,7 +191,7 @@
             
             <div class="card">
                 <div class="card-image">
-                    Step 2 Image
+                  
                 </div>
                 <div class="card-content">
                     <div class="card-title">Add</div>
@@ -178,7 +201,7 @@
             
             <div class="card">
                 <div class="card-image">
-                    Step 2 Image
+                   
                 </div>
                 <div class="card-content">
                     <div class="card-title">Add</div>
@@ -186,7 +209,7 @@
                 </div>
             </div>
         </div>
-        
+ 
         <div class="paginator">
             <a href="step1.html">← Previous</a>
             <div class="page-numbers">
@@ -202,8 +225,10 @@
     </main>
     
     <footer>
-        <p>DrawingTutorials@fakemail.com</p>
-        <p>© 2025 Drawing Tutorials. All Rights Reserved.</p>
+        <div class="footer-content">
+            <p class="footer-email">DrawingTutorials@fakemail.com</p>
+            <p class="footer-copyright">© 2025 Drawing Tutorials. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
