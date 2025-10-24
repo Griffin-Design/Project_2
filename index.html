@@ -14,13 +14,13 @@
         body {
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            min-height: 100%;
             font-family: Arial, sans-serif;
             line-height: 1.6;
         }
         
         header {
-            width: 100vw;
+            width: 100%;
             height: 61px;
             background: #313131;
             display: flex;
@@ -28,6 +28,12 @@
             align-items: center;
             color: white;
         }
+        
+        .header-content h1 a {
+        color: #ffffff; font-size: 24px;  text-decoration: none; }
+
+        .header-content h2 a {
+        color: #ffffff; font-size: 16px; font-weight: normal;  text-decoration: none;}
         
         .header-content {
             width: 100%;
@@ -37,12 +43,9 @@
             align-items: center;
             padding: 0 20px;
         }
-        
-        header h1 { font-size: 24px; }
-        header h2 { font-size: 16px; font-weight: normal; }
-        
+       
         .rectangle {
-            width: 100vw;
+            max-width: 100%;
             height: 8px;
             background: #00A2C7;
         }
@@ -65,10 +68,25 @@
             margin-bottom: 20px;
         }
         
-        .paginator {
+          .paginator {
+            /* In-flow paginator: sits between main and footer */
+            position: static;
             display: flex;
-            justify-content: space-between;
-            margin: 40px 0;
+            justify-content: space-between; /* left Prev, center numbers, right Next */
+            align-items: center;
+            background-color: #fff;
+            padding: 12px 24px;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 800px; /* match main content width */
+            margin: auto; /* even spacing above/below */
+            box-sizing: border-box;
+        }
+
+        .paginator .page-numbers {
+            display: flex;
+            gap: 16px; /* Spacing between buttons */
+            margin: 0 auto; /* center the group between the end buttons */
         }
         
         .paginator a {
@@ -84,10 +102,9 @@
         .paginator a.active { background: #00A2C7; color: white; }
         .paginator a.disabled { color: #ccc; pointer-events: none; }
         
-        .page-numbers { display: flex; gap: 10px; }
-        
         footer {
             padding: 20px 0;
+            margin-top: 60px;
         }
         
         .footer-content {
@@ -111,8 +128,13 @@
 <body>
     <header>
         <div class="header-content">
-            <h1>Drawing Tutorials</h1>
-            <h2>Other Guides  |  About  |  Contact</h2>
+           
+            <h1><a href="index.html">Drawing Tutorials</a></h1>
+            <h2>
+                <a href="other_guides.html">Other Guides</a> 
+                <a href="about.html">About</a> 
+                <a href="contact.html">Contact</a>
+            </h2>
         </div>
     </header>
     <div class="rectangle"></div>
@@ -126,7 +148,9 @@
         but today we'll go with a popular breed. To keep things easy the dog we are gonna be drawing this time is a husky. 
         Each step will be broken up into 2 to 4 parts. Go on to step 1 to start.</p>
         
-        <div class="paginator">
+    </main>
+
+    <div class="paginator">
             <a href="#" class="disabled">← Previous</a>
             <div class="page-numbers">
                 <a href="index.html" class="active">1</a>
@@ -138,8 +162,7 @@
             </div>
             <a href="step1.html">Next →</a>
         </div>
-    </main>
-    
+
     <footer>
         <div class="footer-content">
             <p class="footer-email">DrawingTutorials@fakemail.com</p>
