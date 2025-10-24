@@ -68,26 +68,58 @@
 }
     
 
-        footer {
-        color: rgb(0, 0, 0);
-        padding: 15px 20px;
+         footer {
+            padding: 40px 0;
+            margin-top: 60px;
+            /* no position: relative; avoid absolute centering */
         }
-        
+
         .footer-content {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: auto 1fr auto; /* left / center / right */
             align-items: center;
+            column-gap: 20px;
         }
-        
+
         .footer-email {
             margin: 0;
+            justify-self: start;
         }
-        
+
         .footer-copyright {
             margin: 0;
+            color: #8E8E8E;
+            justify-self: center;    /* exactly centered inside the footer container */
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .footer-icons {
+            display: flex;
+            gap: 22px;
+            justify-self: end;
+            align-items: center;
+        }
+
+        .footer-icons img, .footer-icons svg {
+            height: 24px;
+            width: auto;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 12px;
+            }
+            .footer-email, .footer-copyright, .footer-icons {
+                justify-self: center;
+            }
+            .footer-icons { gap: 16px; }
         }
     </style>
 </head>
@@ -112,7 +144,14 @@
     <footer>
         <div class="footer-content">
             <p class="footer-email">DrawingTutorials@fakemail.com</p>
+
             <p class="footer-copyright">© 2025 Drawing Tutorials. All Rights Reserved.</p>
+
+            <div class="footer-icons">
+                <img src="SVG/X.svg" alt="Icon 1">
+                <img src="SVG/BlueSky.svg" alt="Icon 2">
+                <img src="SVG/Discord.svg" alt="Icon 3">
+            </div>
         </div>
     </footer>
 </body>
