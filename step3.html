@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drawing Tutorials | Features & Form</title>
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -29,8 +31,15 @@
             color: white;
         }
         
-        .header-content h1 a {
-        color: #ffffff; font-size: 24px;  text-decoration: none; }
+           .header-content h1 a {
+            color: #ffffff; 
+            font-size: 24px;
+            text-decoration: none;
+            /* use the loaded font with sensible fallbacks */
+            font-family: 'Montserrat Subrayada', 'Montserrat', Arial, sans-serif;
+            font-weight: 700; /* adjust 400/700 as needed */
+            letter-spacing: 0.5px;
+            }
 
         .header-content h2 a {
         color: #ffffff; font-size: 16px; font-weight: normal;  text-decoration: none;}
