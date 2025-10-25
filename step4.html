@@ -6,6 +6,7 @@
     <title>Drawing Tutorials | Details</title>
     <link rel="icon" type="image/png" href="Images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
         * {
             margin: 0;
@@ -118,9 +119,23 @@
             color: #333;
         }
         
-        .card-content {
-            padding: 12px;
-            text-align: center;
+        .image-card-content {
+            width: 100%;
+            height: 220px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 16px;
+            overflow: hidden;
+         }
+
+        .image-card-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* change to 'contain' if you want full image visible with letterboxing */
+            display: block;
         }
         
         .card-title {
@@ -136,7 +151,7 @@
             line-height: 1.3;
         }
         
-         .paginator {
+            .paginator {
             /* In-flow paginator: sits between main and footer */
             position: static;
             display: flex;
@@ -147,7 +162,7 @@
             border-radius: 4px;
             width: 100%;
             max-width: 800px; /* match main content width */
-            margin:auto; /* even spacing above/below */
+            margin: auto; /* fixed vertical spacing above/below */
             box-sizing: border-box;
         }
 
@@ -246,27 +261,27 @@
         <h1>How To Add Some Extra Detail</h1>
         
         <div class="image-cards-container">
-            <div class="image-card">
-                <div class="image-card-content">
-                 
+                <div class="image-card">
+                    <div class="image-card-content">
+                        <img src="Images/Fur.png" alt="Fur">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Fur</div>
+                        <div class="card-description">Draw rounded spikes at places where the shape curves or would normally have longer fur growth.</div>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <div class="card-title">Fur</div>
-                    <div class="card-description">Draw rounded spikes at places where the shape curves or would normally have longer fur growth.</div>
+                
+                <div class="image-card">
+                    <div class="image-card-content">
+                        <img src="Images/Paws.png" alt="Paws & Claws">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Paws & Claws</div>
+                        <div class="card-description">At the base of the paw circles make four lines with ovals evenly spaced between all the new lines.</div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="image-card">
-                <div class="image-card-content">
-                   
-                </div>
-                <div class="card-content">
-                    <div class="card-title">Paws & Claws</div>
-                    <div class="card-description">At the base of the paw circles make four lines with ovals evenly spaced between all the new lines.</div>
-                </div>
-            </div>
         </div>
-        
+    
     </main>
      <div class="paginator">
             <a href="step3.html">← Previous</a>
