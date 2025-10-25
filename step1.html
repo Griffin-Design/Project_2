@@ -22,6 +22,7 @@
             line-height: 1.6;
         }
         
+       
         header {
             width: 100%;
             height: 61px;
@@ -34,16 +35,17 @@
         
           .header-content h1 a {
             color: #ffffff; 
+            display: inline-block;
             font-size: 24px;
             text-decoration: none;
-            /* use the loaded font with sensible fallbacks */
+            line-height: 1;
             font-family: 'Montserrat Subrayada', 'Montserrat', Arial, sans-serif;
-            font-weight: 700; /* adjust 400/700 as needed */
+            font-weight: 700; 
             letter-spacing: 0.5px;
             }
 
         .header-content h2 a {
-        color: #ffffff; font-size: 16px; font-weight: normal;  text-decoration: none;}
+        color: #ffffff; font-size: 16px; font-weight: normal;  text-decoration: none; padding: 6px 8px;}
         
         .header-content {
             width: 100%;
@@ -55,14 +57,13 @@
         }
        
         .rectangle {
-            max-width: 100%;
             height: 8px;
             background: #00A2C7;
         }
 
         .pipe {
         color: #00A2C7;
-        margin: 0 5px; /* Optional: adds spacing around the pipe */
+        margin: 0 5px; 
         }
         
             main {
@@ -84,24 +85,23 @@
         }
 
           .paginator {
-            /* In-flow paginator: sits between main and footer */
             position: static;
             display: flex;
-            justify-content: space-between; /* left Prev, center numbers, right Next */
+            justify-content: space-between; 
             align-items: center;
             background-color: #fff;
             padding: 12px 24px;
             border-radius: 4px;
             width: 100%;
-            max-width: 800px; /* match main content width */
-            margin:auto; /* even spacing above/below */
+            max-width: 800px; 
+            margin:auto; 
             box-sizing: border-box;
         }
 
         .paginator .page-numbers {
             display: flex;
-            gap: 16px; /* Spacing between buttons */
-            margin: 0 auto; /* center the group between the end buttons */
+            gap: 16px; 
+            margin: 0 auto; 
         }
         
         .paginator a {
@@ -121,7 +121,7 @@
          footer {
             padding: 40px 0;
             margin-top: 60px;
-            /* no position: relative; avoid absolute centering */
+            
         }
 
         .footer-content {
@@ -129,7 +129,7 @@
             margin: 0 auto;
             padding: 0 20px;
             display: grid;
-            grid-template-columns: auto 1fr auto; /* left / center / right */
+            grid-template-columns: auto 1fr auto; 
             align-items: center;
             column-gap: 20px;
         }
@@ -142,7 +142,7 @@
         .footer-copyright {
             margin: 0;
             color: #8E8E8E;
-            justify-self: center;    /* exactly centered inside the footer container */
+            justify-self: center;    
             text-align: center;
             white-space: nowrap;
         }
@@ -158,6 +158,40 @@
             height: 24px;
             width: auto;
             display: block;
+        }
+ @media (max-width: 900px) {
+            header { height: 56px; }
+            .header-content h1 a { font-size: 20px; }
+            .header-content h2 a { font-size: 15px; }
+            .header-content { padding: 0 16px; }
+        }
+
+        
+        @media (max-width: 600px) {
+            header {
+                height: auto;
+                padding: 8px 0;
+            }
+            .header-content {
+                flex-direction: column;
+                gap: 6px;
+                align-items: center;
+                padding: 0 12px;
+            }
+            .header-content h1,
+            .header-content h2 {
+                text-align: center;
+            }
+            .header-content h1 a { font-size: 18px; }
+            .header-content h2 a { font-size: 13px; padding: 6px 10px; }
+            .pipe { display: none; } 
+            .rectangle { height: 6px; }
+        }
+
+        
+        @media (max-width: 360px) {
+            .header-content h1 a { font-size: 16px; }
+            .header-content h2 a { font-size: 12px; padding: 5px 8px; }
         }
 
         @media (max-width: 600px) {
@@ -193,7 +227,7 @@
         .card-image {
             width: 100%;
             height: 160px;
-            background: #fff; /* match card background so letterbox is white instead of gray */
+            background: #fff; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -204,7 +238,7 @@
         .card-image img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* preserves whole image, no gray visible */
+            object-fit: contain; 
             display: block;
         }
         

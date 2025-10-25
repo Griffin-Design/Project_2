@@ -93,3 +93,60 @@
     .lightbox-caption { font-size: 13px; padding: 0 10px; }
     .lightbox-close { top: 12px; right: 12px; }
 }
+@media (max-width: 700px) {
+    .paginator {
+        padding: 10px 16px;
+        margin: 24px auto;
+        gap: 12px;
+        max-width: 100%;
+    }
+    .paginator a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    .paginator .page-numbers {
+        gap: 10px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .paginator {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 8px 12px;
+        margin: 18px auto;
+    }
+
+    /* make Prev/Next full width and keep numbers centered */
+    .paginator > a:first-child,
+    .paginator > a:last-child {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .paginator .page-numbers {
+        order: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin: 8px 0 0 0;
+        width: 100%;
+    }
+
+    .paginator a {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    /* reduce active/hover size slightly */
+    .paginator a.active { padding: 6px 10px; }
+}
+
+@media (max-width: 360px) {
+    .paginator a { font-size: 12px; padding: 5px 8px; }
+    .paginator .page-numbers { gap: 6px; }
+}
