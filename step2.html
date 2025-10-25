@@ -192,12 +192,19 @@
         .card-image {
             width: 100%;
             height: 160px;
-            background: #f0f0f0;
+            background: #fff; /* match card background so letterbox is white instead of gray */
             display: flex;
             align-items: center;
             justify-content: center;
             color: #999;
             font-size: 14px;
+            overflow: hidden;
+        }
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* preserves whole image, no gray visible */
+            display: block;
         }
         
         .card-content {
@@ -238,47 +245,51 @@
         <div class="step-title">Step 2</div>
         <h1>How To Make The Base Shape</h1>
         
-        <div class="card-container">
-            <div class="card">
-                <div class="card-image">
-                 
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-image">
+
+                <img src="Images/snout.png" alt="Snout">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Snout</div>
+                        <div class="card-description">Draw a rectangle at the center bottom side of the  horizontal line in the head.</div>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <div class="card-title">Snout</div>
-                    <div class="card-description">Draw a rectangle at the center bottom side of the  horizontal line in the head.</div>
+                
+                <div class="card">
+                    <div class="card-image">
+
+                <img src="Images/Neck.png" alt="Neck">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Neck</div>
+                        <div class="card-description">Connect the body box and head circle with a cylinder.</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image">
+
+                <img src="Images/BodyShape.png" alt="Body">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Body</div>
+                        <div class="card-description">Connect the two body boxes. </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image">
+
+                <img src="Images/LimbsShape.png" alt="Limbs">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Limbs</div>
+                        <div class="card-description">Draw cylinders between the connecting points  on the limbs guidelines.</div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="card">
-                <div class="card-image">
-                 
-                </div>
-                <div class="card-content">
-                    <div class="card-title">Neck</div>
-                    <div class="card-description">Connect the body box and head circle with a cylinder.</div>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-image">
-                  
-                </div>
-                <div class="card-content">
-                    <div class="card-title">Body</div>
-                    <div class="card-description">Connect the two body boxes. </div>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-image">
-                   
-                </div>
-                <div class="card-content">
-                    <div class="card-title">Limbs</div>
-                    <div class="card-description">Draw cylinders between the connecting points  on the limbs guidelines.</div>
-                </div>
-            </div>
-        </div>
     </main>
     <div class="paginator">
             <a href="step1.html">← Previous</a>
